@@ -1,39 +1,112 @@
+/* Basic Styles */
 body {
-    font-family: Arial, sans-serif;
+    background: #0f0f1a;
+    color: #d1d1e9;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
 }
+
 header {
-    background: #333;
-    color: #fff;
+    background: rgba(15, 15, 26, 0.9);
     padding: 1rem;
     text-align: center;
+    border-bottom: 2px solid #00e0ff;
 }
+
+header h1 {
+    font-size: 24px;
+    color: #00e0ff;
+    text-shadow: 0px 0px 10px #00e0ff;
+    margin: 0;
+}
+
 nav a {
+    color: #ff006e;
     margin: 0 15px;
     text-decoration: none;
-    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
 }
+
+nav a:hover {
+    color: #00e0ff;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('assets/css/images/space-min.jpg') no-repeat center center/cover;
+    position: relative;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    color: #d1d1e9;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #00e0ff;
+    text-shadow: 0 0 10px #00e0ff;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #ff006e;
+    text-shadow: 0 0 5px #ff006e;
+}
+
+.neon-text {
+    font-size: 24px;
+    color: #00ff99;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Glowing Animation */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;
+    }
+    to {
+        text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99, 0 0 80px #00ff99;
+    }
+}
+
+/* Section Styles */
 section {
     padding: 2rem;
     max-width: 800px;
     margin: auto;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #1a1a2e;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     margin-top: 1rem;
+    z-index: 1;
 }
-.project {
-    margin-bottom: 2rem;
-}
+
 footer {
     text-align: center;
     padding: 1rem;
     background: #333;
     color: #fff;
+    border-top: 2px solid #00e0ff;
     position: fixed;
     width: 100%;
     bottom: 0;
