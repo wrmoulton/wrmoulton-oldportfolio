@@ -1,3 +1,31 @@
-theme: jekyll-theme-minimal
-title: Williams's homepage
-description: Bookmark this to keep an eye on my project updates!
+# Site settings
+title: Your Site Name       # The title of your site
+description: A minimal theme with a bold header and easy-to-read content sections. # A short description of your site
+url: "https://yourusername.github.io" # Your site's URL
+baseurl: ""  # Leave this empty if your site is at the root level of your GitHub repository
+
+# Theme settings
+theme: hacker
+
+# Author info
+author:
+  name: Your Name
+  email: your-email@example.com
+  github: yourusername
+
+# Social media links (optional)
+social:
+  github: https://github.com/yourusername
+  linkedin: https://www.linkedin.com/in/yourprofile
+  twitter: https://twitter.com/yourusername
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Pagination settings (optional)
+paginate: 5  # The number of posts to show on each page
+
+# SEO settings
+permalink: /:year/:month/:day/:title/
